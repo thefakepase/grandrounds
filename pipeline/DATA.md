@@ -31,7 +31,8 @@ Each note: `role`, `sub`, `st` stance (`strong_rec`, `rec`, `reference`, `critic
 `m` month. Usernames are deliberately left out.
 
 `sc` = distinct months with a recommendation + 0.5 × months with a strong recommendation + 0.5 ×
-distinct clinician recommenders (+ the HackerTube score for HN videos).
+distinct non-student clinician recommenders, with each month weighted by role (students 0.6,
+others 0.7, clinicians 1); plus 0.4 × the HackerTube score, capped at the Reddit score.
 
 Thumbnails: `https://i.ytimg.com/vi/<vid>/hq2.jpg` (automatic frame from the middle of the video).
 Player: `https://www.youtube-nocookie.com/embed/<vid>`.
@@ -47,7 +48,8 @@ Player: `https://www.youtube-nocookie.com/embed/<vid>`.
 4. Claude wrote a card per video (summary, why, type, level, shelf life, categories) and dropped
    videos that are not about medicine or health.
 5. Kept: videos with at least 2 distinct recommenders, still public and embeddable.
-6. HN part: videos from the HackerTube export in health categories (and AI videos about medicine).
+6. HN signal: for videos also recommended on Hacker News (HackerTube export), HN recommenders are shown
+   and add to the score, at most doubling the Reddit score. Videos recommended only on HN are not included.
 
 LLM labels are good, not perfect: expect a few percent of noise.
 

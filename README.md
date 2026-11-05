@@ -1,7 +1,7 @@
 # Grand Rounds
 
-YouTube videos that people in medicine keep recommending to each other on Reddit, plus the health
-picks of Hacker News (via HackerTube). Static site, no accounts, state in the browser.
+YouTube videos that people in medicine keep recommending to each other on Reddit, with Hacker News
+(via HackerTube) as an extra signal. Static site, no accounts, state in the browser.
 
 - `docs/`: the site, served by GitHub Pages (open `docs/index.html` through any static server; deploy the folder as is)
 - `pipeline/`: how the data was made

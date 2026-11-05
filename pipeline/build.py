@@ -57,7 +57,7 @@ def main(W, S):
         if h: r['hn'] += h['hn']['recommenders']
         # 2 persone diverse, oppure un post linkato molto votato in una community clinica (i voti sono consigli)
         reddit_ok = len(authors) >= 2 or any(m['kind'] == 'post' and (m['score'] or 0) >= 100 for m in recs)
-        if not (reddit_ok or (h and h['hn']['recommenders'] >= 2)): continue
+        if not reddit_ok: continue   # serve almeno un consiglio da Reddit: HN da solo non basta
         card = cards.get(vid, {})
         if card.get('drop'): continue                              # non è un video di medicina/salute
         # ogni mese conta quanto il ruolo più "clinico" che ha consigliato quel mese: gli studenti pesano meno
@@ -67,7 +67,7 @@ def main(W, S):
         strong_m = {m['month'] for m in recs if m['st'] == 'strong_rec'}
         clin_auth = sum(1 for a, ro in authors.items() if ro in CLIN and ro != 'stu')
         sc = sum(month_w.values()) + 0.5 * len(strong_m) + 0.5 * clin_auth
-        if h: sc += 0.4 * h['score']   # il sito è dei clinici: HN pesa meno
+        if h: sc += min(0.4 * h['score'], sc)   # HN può al massimo raddoppiare il punteggio Reddit
         crit = sum(1 for m in rm if m['st'] == 'critical' and m['role'] in CLIN) + (h['hn']['stances'].get('critical', 0) if h else 0)
         years = [int(m['month'][:4]) for m in rm] + ([h['hn']['first_year'], h['hn']['last_year']] if h else [])
         title = (md or {}).get('title') or (h or {}).get('title') or card.get('title') or ''

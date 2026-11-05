@@ -63,7 +63,7 @@ function vitalsLine(v) {
   if (c) bits.push(`${c} clinician${c > 1 ? 's' : ''}`);
   if (h) bits.push(`${h} HN`);
   if (!c && !h && v.r.oth) bits.push(`${v.r.oth} people`);
-  return `<div class="vitals">${strip(v)}<span>${bits.join(' + ')}</span>${v.views ? `<span>· ${fmtNum(v.views)} views</span>` : ''}</div>`;
+  return `<div class="vitals">${strip(v)}<span>${bits.join(' + ')}${v.views ? ' ·' : ''}</span>${v.views ? `<span>${fmtNum(v.views)} views</span>` : ''}</div>`;
 }
 function card(v, k = 0) {
   return `<a class="card" href="#/v/${v.vid}" style="animation-delay:${Math.min(k, 16) * 30}ms">
@@ -185,7 +185,7 @@ const views = {
       <div class="stats">${[['videos', DB.videos.length], ['comments read by Claude', st.mentions], ['subreddits', st.subs], ['years covered', st.years]].filter(x => x[1]).map(([k, n]) => `<div class="stat"><b>${typeof n === 'number' ? n.toLocaleString() : n}</b><span>${k}</span></div>`).join('')}</div>
       <h2>How it was made</h2>
       <p>Every comment and post from ${st.subs || 'a set of'} medical subreddits (r/medicine, r/medicalschool, r/Residency, r/nursing, r/emergencymedicine and others, from the <a href="https://github.com/ArthurHeitmann/arctic_shift" target="_blank" rel="noopener">Arctic Shift</a> archive) was scanned for YouTube links. Claude read each one to tell recommendations apart from jokes, criticism and questions, and to label the topic. A video gets in when several different people recommended it. The role badge (physician, resident, student, nurse) comes from the commenter's Reddit flair or, when there is none, from the subreddit.</p>
-      <p>The health and medicine videos from <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a> (Hacker News recommendations, ODC-By) are included too, shown in orange. When a clinician pushes back on a video, their note shows up in red on the video page.</p>
+      <p>When a video is also recommended on Hacker News (data from <a href="https://hackertube.org" target="_blank" rel="noopener">HackerTube</a>, ODC-By), those recommenders show in orange and add a little to its score. A video recommended only on Hacker News is not listed: it needs at least one medical community behind it. When a clinician pushes back on a video, their note shows up in red on the video page.</p>
       <p>Thumbnails are YouTube's automatic frame from the middle of the video, not the uploader's clickbait. Titles, durations and view counts come from the YouTube Data API and are refreshed periodically. Your likes, history and "watch later" are stored only in this browser.</p>
       <h2>Not medical advice</h2>
       <p>A recommendation from a stranger with a "Physician" flair is a signal, not a guarantee. Flairs on Reddit are self-reported. Talk to your own doctor.</p>
