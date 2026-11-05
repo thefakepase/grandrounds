@@ -1,0 +1,59 @@
+{"version": 1, "areas": [
+ {"id": "clinical", "name": "Clinical medicine", "cats": [
+  {"id": "cardiology", "name": "Cardiology", "desc": "heart, arrhythmia, heart failure, hypertension, ACLS"},
+  {"id": "pulm-critical", "name": "Pulmonology & critical care", "desc": "ICU, ventilation, sepsis, respiratory disease"},
+  {"id": "emergency", "name": "Emergency & trauma", "desc": "ED, resuscitation, trauma, toxicology, prehospital"},
+  {"id": "neurology", "name": "Neurology", "desc": "stroke, epilepsy, neuro exam, neurodegenerative disease"},
+  {"id": "infectious", "name": "Infectious disease", "desc": "antibiotics, HIV, tropical medicine, outbreaks"},
+  {"id": "onc-heme", "name": "Oncology & hematology", "desc": "cancer, blood disorders, chemotherapy"},
+  {"id": "gi-endo", "name": "GI, endocrine & kidney", "desc": "gastroenterology, hepatology, diabetes, thyroid, nephrology"},
+  {"id": "immuno-derm", "name": "Immunology, rheum & skin", "desc": "autoimmune disease, allergy, dermatology"},
+  {"id": "peds-obgyn", "name": "Pediatrics & women's health", "desc": "children, neonates, obstetrics, gynecology, birth"},
+  {"id": "palliative", "name": "Geriatrics, palliative & death", "desc": "end of life, hospice, dying, aging patients"}
+ ]},
+ {"id": "procedures", "name": "Surgery & procedures", "cats": [
+  {"id": "surgery", "name": "Surgery", "desc": "operations, surgical technique, surgical history"},
+  {"id": "anesthesia", "name": "Anesthesia & airway", "desc": "intubation, sedation, pain"},
+  {"id": "skills", "name": "Clinical skills & ultrasound", "desc": "lines, suturing, POCUS, procedures, physical exam"},
+  {"id": "ortho", "name": "Orthopedics & sports medicine", "desc": "bones, joints, injuries, rehab"}
+ ]},
+ {"id": "diagnostics", "name": "Diagnostics", "cats": [
+  {"id": "imaging", "name": "Radiology & imaging", "desc": "x-ray, CT, MRI reading"},
+  {"id": "ecg", "name": "ECG & monitoring", "desc": "EKG interpretation, rhythms, vital signs"},
+  {"id": "lab-path", "name": "Pathology & lab", "desc": "histology, lab medicine, blood tests"},
+  {"id": "diagnosis", "name": "Clinical reasoning", "desc": "differential diagnosis, case discussions, diagnostic errors"}
+ ]},
+ {"id": "basics", "name": "Basic sciences & study", "cats": [
+  {"id": "anatomy", "name": "Anatomy", "desc": "gross anatomy, dissection, embryology"},
+  {"id": "physiology", "name": "Physiology", "desc": "how organs and systems work"},
+  {"id": "pharmacology", "name": "Pharmacology", "desc": "drugs, mechanisms, prescribing"},
+  {"id": "biochem-genetics", "name": "Biochemistry & genetics", "desc": "metabolism, molecular biology, genetics, DNA"},
+  {"id": "micro-immuno", "name": "Microbiology & immunology", "desc": "bacteria, viruses, immune system"},
+  {"id": "exam-prep", "name": "Exam prep & study skills", "desc": "USMLE, NCLEX, boards, Anki, learning techniques"}
+ ]},
+ {"id": "mind", "name": "Mind & brain", "cats": [
+  {"id": "psychiatry", "name": "Psychiatry & mental health", "desc": "depression, ADHD, psychosis, therapy"},
+  {"id": "neuroscience", "name": "Neuroscience", "desc": "the brain, behavior, consciousness, research"},
+  {"id": "addiction", "name": "Addiction", "desc": "substance use, opioids, alcohol, harm reduction"}
+ ]},
+ {"id": "health", "name": "Lifestyle & public health", "cats": [
+  {"id": "nutrition", "name": "Nutrition & metabolism", "desc": "diet, obesity, fasting, sugar"},
+  {"id": "sleep-fitness", "name": "Sleep, exercise & longevity", "desc": "sleep, training, aging well"},
+  {"id": "public-health", "name": "Epidemiology & public health", "desc": "pandemics, vaccines, population health"},
+  {"id": "ebm", "name": "Evidence & statistics", "desc": "evidence-based medicine, trials, biostatistics, misinformation"}
+ ]},
+ {"id": "profession", "name": "Medicine as a job", "cats": [
+  {"id": "health-systems", "name": "Health systems & policy", "desc": "insurance, costs, healthcare economics, policy"},
+  {"id": "history", "name": "History of medicine", "desc": "medical history, famous cases, discoveries"},
+  {"id": "ethics", "name": "Ethics & law", "desc": "consent, malpractice, bioethics"},
+  {"id": "life-in-med", "name": "Life in medicine", "desc": "careers, residency life, burnout, wellbeing, communication with patients"},
+  {"id": "nursing", "name": "Nursing practice", "desc": "nursing skills, nursing life, NCLEX"},
+  {"id": "patient-stories", "name": "Patient stories", "desc": "illness experience, documentaries about patients"},
+  {"id": "humor", "name": "Humor & satire", "desc": "medical comedy, parody, memes"}
+ ]},
+ {"id": "tech", "name": "AI & technology", "cats": [
+  {"id": "ai-medicine", "name": "AI in medicine", "desc": "machine learning, LLMs, computer vision in healthcare"},
+  {"id": "digital-health", "name": "Digital health & devices", "desc": "EHR, wearables, medical devices, health IT"},
+  {"id": "biotech", "name": "Biotech & drug development", "desc": "pharma industry, CRISPR, clinical trials, new therapies"}
+ ]}
+]}
